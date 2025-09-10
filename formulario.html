@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario Opinión Restaurante</title>
+
+  <!-- Fuente elegante desde Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.svgrepo.com/show/430740/fruit.svg'),
+        url('https://www.svgrepo.com/show/430854/vegetable.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: top left, bottom right;
+      background-size: 100px, 100px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #ffe6f0;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ffb6c1;
+      border-radius: 8px;
+      margin-top: 8px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      margin-right: 10px;
+    }
+
+    .star-rating {
+      direction: rtl;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .star-rating input[type='radio'] {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .star-rating input[type='radio']:checked ~ label {
+      color: gold;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 25px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e055a1;
+    }
+
+    /* Estilo para el botón volver al inicio */
+    #btn-inicio {
+      background-color: #d63384;
+      margin-top: 15px;
+    }
+    #btn-inicio:hover {
+      background-color: #a72a67;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="top">
+    <h1>Opinión del Restaurante</h1>
+    <form action="https://formspree.io/f/xldlypwq" method="POST">
+      <label>
+        ¿Cuál es tu nombre?
+        <input type="text" name="nombre" required />
+      </label>
+
+      <label>
+        ¿Qué platillo fue tu favorito?
+        <input type="text" name="platillo_favorito" required />
+      </label>
+
+      <label>
+        ¿Qué calificación le das al servicio?
+        <div class="star-rating">
+          <input type="radio" id="estrella5" name="calificacion" value="5" />
+          <label for="estrella5">&#9733;</label>
+          <input type="radio" id="estrella4" name="calificacion" value="4" />
+          <label for="estrella4">&#9733;</label>
+          <input type="radio" id="estrella3" name="calificacion" value="3" />
+          <label for="estrella3">&#9733;</label>
+          <input type="radio" id="estrella2" name="calificacion" value="2" />
+          <label for="estrella2">&#9733;</label>
+          <input type="radio" id="estrella1" name="calificacion" value="1" />
+          <label for="estrella1">&#9733;</label>
+        </div>
+      </label>
+
+      <label>
+        ¿Deseas recibir promociones?
+        <input type="checkbox" name="promociones" value="Sí" /> Sí, quiero recibir promociones
+      </label>
+
+      <label>
+        ¿Te gusta más lo dulce o lo salado?<br />
+        <input type="radio" name="preferencia" value="Dulce" required /> Dulce<br />
+        <input type="radio" name="preferencia" value="Salado" /> Salado
+      </label>
+
+      <label>
+        ¿Tienes alguna recomendación para nosotros?
+        <textarea name="recomendacion" placeholder="Escríbela aquí..."></textarea>
+      </label>
+
+      <label>
+        Tu correo electrónico:
+        <input type="email" name="email" required />
+      </label>
+
+      <button type="submit">Enviar opinión</button>
+    </form>
+
+    <!-- Botón para regresar al inicio -->
+    <button id="btn-inicio" type="button" onclick="window.location.href='tarta de fresa index.html'">
+      Volver al inicio
+    </button>
+
+    <div class="footer">
+      ¡Gracias por compartir tu experiencia con nosotros!
+    </div>
+  </div>
+</body>
+</html>

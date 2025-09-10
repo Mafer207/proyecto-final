@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recetas con fresa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 50px 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0 0%, #fff5f8 100%);
+      color: #a83259;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 25px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(168, 50, 89, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #d53f7a;
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 1px 1px 5px rgba(213, 63, 122, 0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .recipe-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .recipe-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #ffe6f0;
+      padding: 15px 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(213, 63, 122, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .recipe-item:hover {
+      background-color: #ffd1e3;
+      box-shadow: 0 6px 25px rgba(213, 63, 122, 0.2);
+    }
+
+    .recipe-item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recipe-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    a {
+      display: block;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #d53f7a, #f06292);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 15px 45px;
+      border-radius: 40px;
+      box-shadow: 0 10px 25px rgba(213, 63, 122, 0.3);
+      text-align: center;
+      max-width: 240px;
+      transition: all 0.4s ease;
+      user-select: none;
+    }
+
+    a:hover {
+      background: linear-gradient(135deg, #f06292, #d53f7a);
+      box-shadow: 0 14px 35px rgba(240, 98, 146, 0.6);
+      transform: translateY(-3px);
+    }
+
+    /* SVG decorativos */
+    .decorative-svg {
+      position: absolute;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .svg-top-left {
+      top: 10px;
+      left: 10px;
+      width: 90px;
+      height: 90px;
+      animation-delay: 0s;
+    }
+
+    .svg-bottom-right {
+      bottom: 10px;
+      right: 10px;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3.5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 0.08;
+      }
+      50% {
+        transform: translateY(-10px);
+        opacity: 0.15;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .recipe-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .recipe-item img {
+        width: 100%;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .recipe-name {
+        font-size: 1.1rem;
+      }
+
+      a {
+        font-size: 1rem;
+        padding: 12px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍰 Más recetas con fresa</h1>
+
+    <div class="recipe-list">
+      <div class="recipe-item">
+        <img src="batido.png" alt="Batido de fresa y plátano">
+        <div class="recipe-name">Batido de fresa y plátano</div>
+      </div>
+
+      <div class="recipe-item">
+        <img src="helado.png" alt="Helado de fresa casero">
+        <div class="recipe-name">Helado de fresa casero</div>
+      </div>
+
+      <div class="recipe-item">
+        <img src="chocolate.png" alt="Fresas con chocolate">
+        <div class="recipe-name">Fresas con chocolate</div>
+      </div>
+
+      <div class="recipe-item">
+        <img src="queso.png" alt="Pastel de queso con fresa">
+        <div class="recipe-name">Pastel de queso con fresa</div>
+      </div>
+    </div>
+
+    <a href="tarta de fresa index.html">⬅️ Volver a la receta</a>
+
+    <!-- Dibujos SVG decorativos -->
+    <svg class="decorative-svg svg-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#f06292">
+      <circle cx="32" cy="32" r="30" />
+      <path d="M32 12c-7 0-10 5-10 10 0 6 10 20 10 20s10-14 10-20c0-5-3-10-10-10z" fill="#d53f7a"/>
+      <circle cx="32" cy="22" r="3" fill="#fff"/>
+    </svg>
+
+    <svg class="decorative-svg svg-bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#f06292">
+      <circle cx="32" cy="32" r="30" />
+      <path d="M32 12c-7 0-10 5-10 10 0 6 10 20 10 20s10-14 10-20c0-5-3-10-10-10z" fill="#d53f7a"/>
+      <circle cx="32" cy="22" r="3" fill="#fff"/>
+    </svg>
+  </div>
+</body>
+</html>

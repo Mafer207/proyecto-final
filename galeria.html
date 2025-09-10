@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galería de Tartas</title>
+  
+  <!-- Google Fonts: 'Playfair Display' para título y 'Poppins' para texto -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset y base */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffe6f0 0%, #fff5f8 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #4a2c3b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #b8326a;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px rgba(184, 50, 106, 0.4);
+      letter-spacing: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 50px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(184, 50, 106, 0.25);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 15px 35px rgba(184, 50, 106, 0.45);
+    }
+
+    a {
+      background: linear-gradient(135deg, #b8326a, #f06292);
+      color: white;
+      text-decoration: none;
+      padding: 15px 45px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 20px rgba(184, 50, 106, 0.35);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    a:hover {
+      background: linear-gradient(135deg, #f06292, #b8326a);
+      box-shadow: 0 12px 30px rgba(240, 98, 146, 0.6);
+    }
+
+    /* Para pantallas muy pequeñas */
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 2rem;
+      }
+      a {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📷 Galería de Tartas de Fresa</h1>
+  <div class="gallery">
+    <img src=tarta1.png>
+    <img src=tarta2.png>
+    <img src=tarta3.png>
+  </div>
+  <a href="tarta de fresa index.html">⬅️ Volver al inicio</a>
+</body>
+</html>

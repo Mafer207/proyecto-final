@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bases de tarta caseras</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff8f1, #fde3cb);
+      color: #5c3a1c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decoraciones SVG */
+    .decor-top-left,
+    .decor-bottom-right {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .decor-top-left {
+      top: -20px;
+      left: -20px;
+    }
+
+    .decor-bottom-right {
+      bottom: -20px;
+      right: -20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #b05e25;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 15px 0 10px 0;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+
+    ul li {
+      background-color: #fff3e0;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    ul li::before {
+      content: "🥧";
+      font-size: 1.3rem;
+    }
+
+    a {
+      display: block;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #ff8a65, #ff7043);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 15px rgba(255, 112, 67, 0.3);
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    a:hover {
+      background: linear-gradient(135deg, #ff7043, #ff8a65);
+      box-shadow: 0 8px 25px rgba(255, 112, 67, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
+
+      a {
+        font-size: 1rem;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🥧 Cómo hacer una base de tarta casera</h1>
+    <p>Ingredientes:</p>
+    <ul>
+      <li>200g de harina</li>
+      <li>100g de mantequilla fría</li>
+      <li>1 huevo</li>
+      <li>1 pizca de sal</li>
+    </ul>
+    <p>Mezcla, refrigera y hornea a ciegas antes de usar.</p>
+    <a href=" tarta de fresa index.html">⬅️ Volver a la receta</a>
+
+    <!-- Dibujos decorativos SVG -->
+    <svg class="decor-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#ff7043">
+      <path d="M32 12c-6 0-10 4-10 10s10 20 10 20 10-14 10-20-4-10-10-10z"/>
+    </svg>
+
+    <svg class="decor-bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#ff7043">
+      <path d="M32 12c-6 0-10 4-10 10s10 20 10 20 10-14 10-20-4-10-10-10z"/>
+    </svg>
+  </div>
+</body>
+</html>
